@@ -10,14 +10,32 @@ class HomePage extends StatelessWidget {
         title: Text('Welcome to StuMap'),
         centerTitle: true,
       ),
-      body: Column(
-        children: const <Widget>[
-          Expanded(
-            child: Text('Select A Building'),
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(10.8),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Select A Building',
+                style: TextStyle(fontSize: 20),
+              ),
+              SizedBox(height: 10, width: 10),
+              TextButton(
+                child: Text(
+                  'Agcricultural Sciences',
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blue[400]),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)))),
+                onPressed: () {},
+              ),
+            ],
           ),
-          SizedBox(height: 10, width: 10),
-          TextButton(onPressed: null, child: Text('Agcricultural Sciences')),
-        ],
+        ),
       ),
     );
   }
