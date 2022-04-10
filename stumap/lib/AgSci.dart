@@ -6,10 +6,16 @@ class AgSci extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: WebView(
-        initialUrl: Uri.dataFromString('<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dUaHNCoP-ONrENg1-PZ4ljxzvjpY3wEP&ehbc=2E312F" width="640" height="480"></iframe>', mimeType: 'text/html').toString(),
-        javascriptMode: JavascriptMode.unrestricted,
+    return Scaffold(
+      appBar: AppBar(),
+      body: Container(
+        child: WebView(
+          initialUrl: Uri.dataFromString(
+                  '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dUaHNCoP-ONrENg1-PZ4ljxzvjpY3wEP&ehbc=2E312F" width="640" height="480"></iframe>',
+                  mimeType: 'text/html')
+              .toString(),
+          javascriptMode: JavascriptMode.unrestricted,
+        ),
       ),
     );
   }
