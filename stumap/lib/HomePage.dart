@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stumap/AgSci.dart';
+import 'Thomas.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,6 +36,21 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AgSci()));
+                },
+              ),
+              TextButton(
+                child: Text(
+                  'Thomas Building',
+                  style: TextStyle(color: Colors.white),
+                ),
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blue[400]),
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)))),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Thomas()));
                 },
               ),
             ],
