@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stumap/AgSci.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,7 +32,10 @@ class HomePage extends StatelessWidget {
                         MaterialStateProperty.all(Colors.blue[400]),
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)))),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AgSci()));
+                },
               ),
             ],
           ),
