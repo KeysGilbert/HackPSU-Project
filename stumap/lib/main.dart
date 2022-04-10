@@ -12,6 +12,7 @@ class StuMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       home: HomePage(),
     );
