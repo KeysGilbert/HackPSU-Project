@@ -1,4 +1,4 @@
-What IS IT?
+WHAT IS IT?
 
 A sort of, Google Maps for navigating the indoors of Penn State classroom buildings.
 
